@@ -1,0 +1,84 @@
+/* src/styles/FilterBar.css */
+.filter-bar {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #343a40;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 5px;
+}
+
+.category-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.category-checkbox input {
+  margin-right: 8px;
+}
+
+.category-label {
+  font-size: 14px;
+}
+
+.timeframe-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.severity-filter {
+  margin-top: 15px;
+}
+
+.severity-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider-label {
+  min-width: 40px;
+  font-size: 14px;
+}
+
+.severity-slider {
+  flex: 1;
+}
+
+.slider-value {
+  min-width: 30px;
+  text-align: right;
+  font-size: 14px;
+}

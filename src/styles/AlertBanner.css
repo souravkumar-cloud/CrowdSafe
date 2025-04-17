@@ -1,0 +1,33 @@
+/* src/styles/AlertBanner.css */
+.alert-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffeeba;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+}
+
+.alert-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: #856404;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.alert-close:hover {
+  color: #533f03;
+}

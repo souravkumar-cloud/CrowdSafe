@@ -1,0 +1,40 @@
+/* src/App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Make leaflet container fill the map area */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom popup styling */
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 5px 10px;
+  width: 250px !important;
+}
+
+/* Fix for marker shadows */
+.leaflet-marker-shadow {
+  display: none;
+}
+
+/* Override some popup elements */
+.leaflet-popup-close-button {
+  z-index: 1000;
+}
+
+.leaflet-popup-tip-container {
+  overflow: hidden;
+}

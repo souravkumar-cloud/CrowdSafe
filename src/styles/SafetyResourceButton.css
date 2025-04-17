@@ -1,0 +1,32 @@
+/* src/styles/SafetyResourceButton.css */
+.safety-resource-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 500;
+  transition: all 0.3s;
+}
+
+.safety-resource-button:hover {
+  background-color: #218838;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.resource-icon {
+  font-size: 18px;
+}
+
+.resource-text {
+  font-size: 14px;
+}
