@@ -1,12 +1,55 @@
-# React + Vite
+# CrowdSafe 🚨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CrowdSafe** is a data-driven crime severity assessment tool designed to help individuals understand the safety level of their local area based on historical crime reports. By analyzing and rating crime offense descriptions using a keyword-based severity dictionary, CrowdSafe provides a simplified overview of how serious or frequent different criminal offenses are in specific areas.
 
-Currently, two official plugins are available:
+## 🔍 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 Converts raw offense descriptions into numeric severity scores.
+- 🧠 Uses a dictionary-based approach to match keywords with severity levels.
+- 🗺️ Enables local area crime mapping and heatmaps.
+- 📈 Helps visualize patterns and hotspots for crime using severity rankings.
+- 🧹 Cleans and standardizes offense data for better analysis.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Python 🐍 (Pandas, Regex)
+- Keyword-based NLP (No external ML model required)
+- Jupyter / Colab friendly notebook format
+
+## 🚦 Severity Scoring
+
+Severity is rated on a scale from 0 (unknown/minor) to 100 (very severe). The rating is based on the presence of certain keywords in the offense descriptions, such as:
+
+- `MURDER`, `RAPE`, `TERRORISTIC THREAT` → Score: 90–100
+- `ASSAULT`, `ROBBERY`, `FIREARM` → Score: 70–90
+- `LARCENY`, `FRAUD`, `DRUG` → Score: 50–70
+- `TRESPASS`, `DISORDERLY CONDUCT` → Score: 20–40
+- `UNLICENSED`, `NOISE`, `CELL PHONE` → Score: 10–20
+
+## 📂 How It Works
+
+1. Import the offense description dataset.
+2. Clean and standardize the text.
+3. Match words or phrases against a pre-defined severity keyword dictionary.
+4. Assign scores based on keyword relevance and numeric indicators (like "1st degree", "3rd", etc).
+5. Display the results in a DataFrame or export for visualization.
+
+## 🧠 Example Output
+
+| PD_DESC                      | SEVERITY |
+|-----------------------------|----------|
+| STRANGULATION 1ST           | 95       |
+| RAPE 3                      | 90       |
+| BURGLARY,UNCLASSIFIED       | 75       |
+| DISORDERLY CONDUCT          | 25       |
+| UNKNOWN                     | 0        |
+
+## 📍 Use Cases
+
+- Public safety dashboards
+- Crime heatmap visualizations
+- Community awareness apps
+- Urban planning and security assessments
+
+
+Feel free to contribute or suggest features to improve CrowdSafe!
